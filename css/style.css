@@ -68,8 +68,10 @@ footer{
 
 #logo{
    /*Your code here.*/
-  animation-name: logo_wiggle;
-  animation-duration: 15s;
+   -webkit-animation-name: logo_wiggle;
+   animation-name: logo_wiggle;
+  -webkit-animation-duration: 15s;
+   animation-duration: 15s;
 }
 
 /* Cards! */
@@ -77,10 +79,19 @@ footer{
     min-height: 500px;
     /*Your code here.*/
     /*Don't forget to vertically and horizontally alight the card*/
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: row wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
 }
 
 .card {
@@ -90,6 +101,7 @@ footer{
   padding: 0 0 50px 0;
   /*Your code here.*/
   /*Take a look at flex-basis*/
+  -ms-flex-preferred-size: 400px;
   flex-basis: 400px;
 }
 
@@ -136,10 +148,18 @@ footer{
 .gallery{
   min-height: 600px;
   /*Your code here again.*/
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .gallery > img{
@@ -153,18 +173,36 @@ header{
   background: #fff;
   border-bottom: 3px solid #50C7C7;
   /*Your  code here again.*/
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .nav_links{
   /*Your code here again.*/
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .nav_item a{
@@ -184,6 +222,7 @@ header{
   /* Cards! */
   .card {
     /*Your  code here again.*/
+    -ms-flex-preferred-size: 225px;
     flex-basis: 225px;
   }
 
@@ -195,13 +234,21 @@ header{
   /* Navbar */
   header{
     /*Your code here again.*/  
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;  
+    -webkit-box-direction: normal;  
+        -ms-flex-flow: row nowrap;  
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .nav_links{
     /*Your code here again.*/  
-    flex-flow: row nowrap;
+    -webkit-box-orient: horizontal;  
+    -webkit-box-direction: normal;  
+        -ms-flex-flow: row nowrap;  
+            flex-flow: row nowrap;
   }
 
   .nav_item a{
@@ -219,8 +266,13 @@ header{
     background-image: none;
   }
   .pricing{
-    align-items: flex-start;
-    flex-flow: row wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
   } 
 
   .gallery{
@@ -240,6 +292,7 @@ header{
 /*Add media query to handle reduced-motion*/
 @media screen and (prefers-reduced-motion:reduce){
   #logo{
-    animation: logo_wiggle 0s;
+    -webkit-animation: logo_wiggle 0s;
+            animation: logo_wiggle 0s;;
   }
 }
