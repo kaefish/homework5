@@ -275,7 +275,7 @@ header{
             flex-flow: row wrap;
   } 
 
-  #gallery{
+  #gallery, .gallery{
     display: none;
   }
 
