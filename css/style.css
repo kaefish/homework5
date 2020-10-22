@@ -275,10 +275,6 @@ header{
             flex-flow: row wrap;
   } 
 
-  .gallery{
-    display: none;
-  }
-
   #gallery{
     display: none;
   }
