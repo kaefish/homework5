@@ -39,7 +39,7 @@ a.skip:focus{
   text-decoration-style: solid;
 }
 
-*:focus{
+:focus{
   border: 2px solid black;
 }
 
